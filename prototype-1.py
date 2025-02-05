@@ -1,3 +1,10 @@
+'''
+Task:
+Create a function that returns true if two lines rhyme and false otherwise. For the purposes of this
+exercise, two lines rhyme if the last word from each sentence contains the same vowels
+'''
+
+
 import re
 
 def doesRhyme(LineOne: str, LineTwo: str) -> bool:
@@ -18,10 +25,13 @@ def doesRhyme(LineOne: str, LineTwo: str) -> bool:
     #* Compare and output
     return LineOne == LineTwo
 
-print(
-doesRhyme("Sam I am!", "Green eggs and ham."),
-doesRhyme("Sam I am!", "Green eggs and HAM."),
-doesRhyme("You're built like a seat", "I bet you like to eat"),
-doesRhyme("You are off to the races", "a splendid day."),
-doesRhyme("and frequently do?", "you gotta move.")
-)
+
+if __name__ == "__main__":
+    #? Testing example cases
+    print(
+        doesRhyme("Sam I am!", "Green eggs and ham."),
+        doesRhyme("Sam I am!", "Green eggs and HAM."),
+        doesRhyme("You're built like a seat", "I bet you like to eat"),
+        doesRhyme("You are off to the races", "a splendid day."),
+        doesRhyme("and frequently do?", "you gotta move.")
+    )
